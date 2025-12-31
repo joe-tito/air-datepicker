@@ -79,10 +79,6 @@ export default class DatepickerCell {
         let isOutOfMinMaxRange = this._isOutOfMinMaxRange();
         let isDisabled = isDateDisabled(this.date);
 
-        console.log('this.opts', this.opts);
-        console.log('currentDate', currentDate);
-        console.log('this.date', this.date);
-
         let classNameCommon = classNames(
             'air-datepicker-cell',
             `-${this.singleType}-`, // days -> day etc.'`
