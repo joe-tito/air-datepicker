@@ -72,12 +72,16 @@ export default class DatepickerCell {
     }
 
     _getClassName() {
-        let currentDate = this.opts.currentDate ||new Date();
+        let currentDate = this.opts.currentDate || new Date();
         let {selectOtherMonths, selectOtherYears} = this.opts;
         let {minDate, maxDate, isDateDisabled} = this.dp;
         let {day} = getParsedDate(this.date);
         let isOutOfMinMaxRange = this._isOutOfMinMaxRange();
         let isDisabled = isDateDisabled(this.date);
+
+        console.log('this.opts', this.opts);
+        console.log('currentDate', currentDate);
+        console.log('this.date', this.date);
 
         let classNameCommon = classNames(
             'air-datepicker-cell',
